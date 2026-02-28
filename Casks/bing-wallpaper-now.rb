@@ -12,9 +12,14 @@ cask "bing-wallpaper-now" do
 
   depends_on macos: ">= :catalina"
 
+  auto_updates true
+
   app "Bing Wallpaper Now.app"
 
   zap trash: [
     "~/Library/Application Support/top.qiyuey.wallpaper",
+    "~/Library/Caches/top.qiyuey.wallpaper",
+    "~/Library/LaunchAgents/top.qiyuey.wallpaper.plist",
+    "~/Library/WebKit/top.qiyuey.wallpaper",
   ]
 end
