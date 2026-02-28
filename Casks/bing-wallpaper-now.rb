@@ -1,9 +1,9 @@
 cask "bing-wallpaper-now" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.4.1"
-  sha256 arm:   "1b644d60f9fcd9488c2358a04a1de6f184ba5a2b1b4bb89771df61907c5029fc",
-         intel: "1c5070572433092f402705235fe64c3d4599e0a76c897e1a75139698e3fe879a"
+  version "1.4.2"
+  sha256 arm:   "666490033a9820534e36c6058ddadfc7721c876e067edf128c8ec72ce1e872d3",
+         intel: "3d3552926b436b369743a2ac9d0b2e4c507c64f476f2ab63e90819c9d7a3dc24"
 
   url "https://github.com/qiyuey/bing-wallpaper-now/releases/download/#{version}/Bing.Wallpaper.Now_#{version}_#{arch}.dmg"
   name "Bing Wallpaper Now"
