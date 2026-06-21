@@ -1,15 +1,13 @@
 cask "bing-wallpaper-now" do
-  arch arm: "aarch64", intel: "x64"
+  version "1.4.8"
+  sha256 "2249f577e576cb6ce86065fd7a52fdc58a9f86e0d6273e4f1bbfd93a729f9812"
 
-  version "1.4.7"
-  sha256 arm:   "365b8736f6f1a92b264ad51e88165475eb0fbe424bc43ced4f5a24c05bba4435",
-         intel: "9f48c45b3a38ab1b7b82871ffd4a2fc71f49e3ba1feb17d5e85bb9f4e2f1205a"
-
-  url "https://github.com/qiyuey/bing-wallpaper-now/releases/download/#{version}/Bing.Wallpaper.Now_#{version}_#{arch}.dmg"
+  url "https://github.com/qiyuey/bing-wallpaper-now/releases/download/#{version}/Bing.Wallpaper.Now_#{version}_aarch64.dmg"
   name "Bing Wallpaper Now"
   desc "Automatically fetch and set Bing daily wallpapers"
   homepage "https://github.com/qiyuey/bing-wallpaper-now"
 
+  depends_on arch: :arm64
   depends_on macos: :catalina
 
   livecheck do
