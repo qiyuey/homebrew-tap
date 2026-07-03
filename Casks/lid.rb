@@ -1,6 +1,6 @@
 cask "lid" do
-  version "2026.7.7"
-  sha256 "72adac3deb172f5b7b30eb6c3552cd24d1e7c9e41d9715bae4412c38b94e4a25"
+  version "2026.7.8"
+  sha256 "045998bea989444de2800135ab6152551a556a1f7a1bfbddbbf45a15f55eb02b"
 
   url "https://github.com/qiyuey/lid/releases/download/v#{version}/Lid-#{version}-self-signed.dmg"
   name "Lid"
