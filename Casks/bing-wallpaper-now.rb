@@ -1,6 +1,6 @@
 cask "bing-wallpaper-now" do
-  version "1.5.6"
-  sha256 "d68fdba1331c0fdb427a3726a9fc7f152c2e1fa997f552414307a3ae71bf0bda"
+  version "1.6.0"
+  sha256 "35ed5ba5e68685352b7ec9378d818f2310baa8fcd5600786f55e86ffc9812cde"
 
   url "https://github.com/qiyuey/bing-wallpaper-now/releases/download/#{version}/Bing.Wallpaper.Now_#{version}_aarch64.dmg"
   name "Bing Wallpaper Now"
