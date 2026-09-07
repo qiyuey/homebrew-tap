@@ -14,14 +14,14 @@ cask "bing-wallpaper-now" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Bing Wallpaper Now.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/Bing Wallpaper Now.app"],
-                   must_succeed: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/Bing Wallpaper Now.app"],
+        must_succeed: false
   end
 
   uninstall launchctl: "top.qiyuey.wallpaper",

@@ -6,7 +6,7 @@ Homebrew tap for qiyuey's macOS apps.
 
 | Cask | App | Requirement |
 | --- | --- | --- |
-| `bing-wallpaper-now` | [Bing Wallpaper Now](https://github.com/qiyuey/bing-wallpaper-now) | Apple Silicon, macOS 10.15+ |
+| `bing-wallpaper-now` | [Bing Wallpaper Now](https://github.com/qiyuey/bing-wallpaper-now) | Apple Silicon, a macOS version allowed by Homebrew |
 | `lid` | [Lid](https://github.com/qiyuey/lid) | macOS 26+ |
 
 ## Install
