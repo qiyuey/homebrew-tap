@@ -1,6 +1,6 @@
 cask "lid" do
-  version "2026.7.13"
-  sha256 "a6f2d300a9217d932e36dfd5e267cf2878f5b326152ae16914e041af9dfbcf81"
+  version "2026.9.1"
+  sha256 "ab660822eb462e49e84421dbccdf481d6c4de7d2a9e733733b5e3b931c2d8661"
 
   url "https://github.com/qiyuey/lid/releases/download/v#{version}/Lid-#{version}-self-signed.dmg"
   name "Lid"
@@ -17,10 +17,10 @@ cask "lid" do
 
   app "Lid.app"
 
-  postflight_steps do
-    run "/usr/bin/xattr",
-        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/Lid.app"],
-        must_succeed: false
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/Lid.app"],
+                   must_succeed: false
   end
 
   uninstall quit: "top.qiyuey.lid"
