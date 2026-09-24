@@ -1,6 +1,6 @@
 cask "bing-wallpaper-now" do
-  version "1.6.0"
-  sha256 "35ed5ba5e68685352b7ec9378d818f2310baa8fcd5600786f55e86ffc9812cde"
+  version "1.6.1"
+  sha256 "1b15ee4610316bbee64a7b288b5362abd6d11bf28e3dc915baaa2d636d6fbf26"
 
   url "https://github.com/qiyuey/bing-wallpaper-now/releases/download/#{version}/Bing.Wallpaper.Now_#{version}_aarch64.dmg"
   name "Bing Wallpaper Now"
@@ -14,14 +14,14 @@ cask "bing-wallpaper-now" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on :macos
+  depends_on macos: :catalina
 
   app "Bing Wallpaper Now.app"
 
-  postflight_steps do
-    run "/usr/bin/xattr",
-        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/Bing Wallpaper Now.app"],
-        must_succeed: false
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/Bing Wallpaper Now.app"],
+                   must_succeed: false
   end
 
   uninstall launchctl: "top.qiyuey.wallpaper",
